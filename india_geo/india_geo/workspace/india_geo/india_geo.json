@@ -2,6 +2,7 @@
  "app": "india_geo",
  "charts": [],
  "content": "[{\"id\":\"geoHeader\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>India Geo</b></span>\",\"col\":12}},{\"id\":\"scRegion\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Region\",\"col\":3}},{\"id\":\"scState\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"State\",\"col\":3}},{\"id\":\"scDistrict\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"District\",\"col\":3}},{\"id\":\"scCity\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"City\",\"col\":3}},{\"id\":\"mastersHeader\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Masters</b></span>\",\"col\":12}},{\"id\":\"cardMasters\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":8}},{\"id\":\"cardCdn\",\"type\":\"card\",\"data\":{\"card_name\":\"Maps & CDN\",\"col\":4}}]",
+ "creation": "2026-08-31 15:51:46.428004",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -26,7 +27,7 @@
    "is_query_report": 0,
    "label": "Region",
    "link_count": 0,
-   "link_to": "India Geo Region",
+   "link_to": "Region",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -36,7 +37,7 @@
    "is_query_report": 0,
    "label": "Zone",
    "link_count": 0,
-   "link_to": "India Geo Zone",
+   "link_to": "Zone",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -46,7 +47,7 @@
    "is_query_report": 0,
    "label": "State",
    "link_count": 0,
-   "link_to": "India Geo State",
+   "link_to": "State",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -56,7 +57,7 @@
    "is_query_report": 0,
    "label": "District",
    "link_count": 0,
-   "link_to": "India Geo District",
+   "link_to": "District",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -66,7 +67,7 @@
    "is_query_report": 0,
    "label": "City",
    "link_count": 0,
-   "link_to": "India Geo City",
+   "link_to": "City",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
@@ -85,23 +86,51 @@
    "is_query_report": 0,
    "label": "CDN Status",
    "link_count": 0,
-   "link_to": "India Geo Region",
+   "link_to": "Region",
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
   }
  ],
+ "modified": "2026-08-31 16:04:15.336153",
+ "modified_by": "Administrator",
  "module": "India Geo",
  "name": "India Geo",
  "number_cards": [],
+ "owner": "Administrator",
  "public": 1,
  "quick_lists": [],
  "roles": [],
+ "sequence_id": 0.0,
  "shortcuts": [
-  {"color": "Blue", "doc_view": "List", "label": "Region", "link_to": "India Geo Region", "type": "DocType"},
-  {"color": "Green", "doc_view": "List", "label": "State", "link_to": "India Geo State", "type": "DocType"},
-  {"color": "Orange", "doc_view": "List", "label": "District", "link_to": "India Geo District", "type": "DocType"},
-  {"color": "Grey", "doc_view": "List", "label": "City", "link_to": "India Geo City", "type": "DocType"}
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Region",
+   "link_to": "Region",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "State",
+   "link_to": "State",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "District",
+   "link_to": "District",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "City",
+   "link_to": "City",
+   "type": "DocType"
+  }
  ],
  "title": "India Geo",
  "type": "Workspace"

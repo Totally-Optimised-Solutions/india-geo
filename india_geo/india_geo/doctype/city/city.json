@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "autoname": "field:city_name",
+ "creation": "2026-08-31 15:44:52.272806",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "city_name",
+  "district",
+  "state",
+  "column_break_1",
+  "city_type",
+  "is_enabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "city_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "City Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "District",
+   "options": "District"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "State",
+   "options": "State"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "City",
+   "fieldname": "city_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type",
+   "options": "\nCity\nTown\nVillage"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_enabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Enabled"
+  }
+ ],
+ "links": [],
+ "modified": "2026-08-31 16:04:08.301081",
+ "modified_by": "Administrator",
+ "module": "India Geo",
+ "name": "City",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "India Geo Admin",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "India Geo Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "MFI Admin"
+  },
+  {
+   "read": 1,
+   "role": "MFI Branch Manager"
+  },
+  {
+   "read": 1,
+   "role": "MFI Auditor"
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "city_name, district, state",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "city_name",
+ "track_changes": 1
+}

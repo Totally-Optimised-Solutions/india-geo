@@ -1,0 +1,104 @@
+{
+ "actions": [],
+ "autoname": "field:district_name",
+ "creation": "2026-08-31 15:44:51.959416",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "district_name",
+  "district_code",
+  "state",
+  "column_break_1",
+  "is_enabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "district_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "District Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "description": "dtcode11 / LGD \u2014 e.g. 521 for Pune",
+   "fieldname": "district_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "District Code (LGD)"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "State",
+   "options": "State",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_enabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Enabled"
+  }
+ ],
+ "links": [],
+ "modified": "2026-08-31 16:04:05.908586",
+ "modified_by": "Administrator",
+ "module": "India Geo",
+ "name": "District",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "India Geo Admin",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "India Geo Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "MFI Admin"
+  },
+  {
+   "read": 1,
+   "role": "MFI Branch Manager"
+  },
+  {
+   "read": 1,
+   "role": "MFI Loan Officer"
+  },
+  {
+   "read": 1,
+   "role": "MFI Auditor"
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "district_name, district_code, state",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "district_name",
+ "track_changes": 1
+}

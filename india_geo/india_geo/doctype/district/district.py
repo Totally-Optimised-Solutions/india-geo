@@ -2,7 +2,7 @@ import frappe
 from frappe.model.document import Document
 
 
-class IndiaGeoDistrict(Document):
+class District(Document):
 	def validate(self):
 		if self.district_name and self.state:
 			exists = frappe.db.exists(

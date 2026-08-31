@@ -1,0 +1,124 @@
+{
+ "actions": [],
+ "autoname": "field:state_name",
+ "creation": "2026-08-31 15:44:52.095159",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "state_name",
+  "state_code",
+  "column_break_1",
+  "region",
+  "is_ut",
+  "section_break_1",
+  "zone",
+  "is_enabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "state_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "State Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "description": "LGD Stcode11 / State_LGD \u2014 e.g. 27 for Maharashtra",
+   "fieldname": "state_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "State Code (LGD)"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Region",
+   "options": "Region"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_ut",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Is UT"
+  },
+  {
+   "fieldname": "section_break_1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "zone",
+   "fieldtype": "Link",
+   "label": "Zone",
+   "options": "Zone"
+  },
+  {
+   "default": "1",
+   "fieldname": "is_enabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Enabled"
+  }
+ ],
+ "links": [],
+ "modified": "2026-08-31 16:04:02.848262",
+ "modified_by": "Administrator",
+ "module": "India Geo",
+ "name": "State",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "India Geo Admin",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "India Geo Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "MFI Admin"
+  },
+  {
+   "read": 1,
+   "role": "MFI Branch Manager"
+  },
+  {
+   "read": 1,
+   "role": "MFI Loan Officer"
+  },
+  {
+   "read": 1,
+   "role": "MFI Auditor"
+  }
+ ],
+ "row_format": "Dynamic",
+ "search_fields": "state_name, state_code, region",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "state_name",
+ "track_changes": 1
+}
