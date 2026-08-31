@@ -1,5 +1,5 @@
 app_name = "india_geo"
-app_title = "India Geo"
+app_title = "Geo Locations"
 app_publisher = "Totally Optimised Solutions"
 app_description = "Geo Locations"
 app_email = "hello@totallyoptimised.com"

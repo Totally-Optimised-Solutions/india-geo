@@ -1,7 +1,7 @@
 {
  "app": "india_geo",
  "charts": [],
- "content": "[{\"id\":\"geoHeader\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>India Geo</b></span><br><span class=\\\"text-muted\\\">Geo Locations</span>\",\"col\":12}},{\"id\":\"scRegion\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Region\",\"col\":3}},{\"id\":\"scState\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"State\",\"col\":3}},{\"id\":\"scDistrict\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"District\",\"col\":3}},{\"id\":\"scCity\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"City\",\"col\":3}},{\"id\":\"mastersHeader\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Masters</b></span>\",\"col\":12}},{\"id\":\"cardMasters\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":8}},{\"id\":\"cardCdn\",\"type\":\"card\",\"data\":{\"card_name\":\"Maps & CDN\",\"col\":4}}]",
+ "content": "[{\"id\":\"scRegion\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Region\",\"col\":3}},{\"id\":\"scState\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"State\",\"col\":3}},{\"id\":\"scDistrict\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"District\",\"col\":3}},{\"id\":\"scCity\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"City\",\"col\":3}},{\"id\":\"mastersHeader\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>Masters</b></span>\",\"col\":12}},{\"id\":\"cardMasters\",\"type\":\"card\",\"data\":{\"card_name\":\"Masters\",\"col\":8}},{\"id\":\"cardCdn\",\"type\":\"card\",\"data\":{\"card_name\":\"Maps & CDN\",\"col\":4}}]",
  "creation": "2026-08-31 15:51:46.428004",
  "custom_blocks": [],
  "docstatus": 0,
