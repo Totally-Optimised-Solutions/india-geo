@@ -1,0 +1,742 @@
+{
+ "version": "v1",
+ "source_repo": "yashveeeeeeer/india-geodata",
+ "source_tag": [
+  "admin/states",
+  "admin/districts"
+ ],
+ "assets": [
+  "LGD_States.parquet",
+  "LGD_Districts.parquet"
+ ],
+ "built_at": "2026-08-31T09:04:10.764790Z",
+ "crs": "EPSG:4326",
+ "license": "CC0-1.0 / CC-BY-4.0",
+ "simplify_tol": {
+  "states": 0.0005,
+  "districts": 0.0003
+ },
+ "quantize_decimals": 5,
+ "files": [
+  {
+   "path": "states.min.geojson.gz",
+   "use": "states",
+   "features": 36,
+   "size_gz": 1116786,
+   "size_br": 589990,
+   "sha256": "ef9bfd233af74e7ac12daf1a5260c315976ed7474a82decb6ec485f2499c9375",
+   "sha256_br": "09b9d8945a51bcd9cac5da4e7f5b75b06d6876ebd7a9fb2e0de08a02b492f4a7",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "states.min.geojson.br",
+   "use": "states-brotli",
+   "features": 36,
+   "size_br": 589990,
+   "sha256_br": "09b9d8945a51bcd9cac5da4e7f5b75b06d6876ebd7a9fb2e0de08a02b492f4a7",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts.min.geojson.gz",
+   "use": "districts",
+   "features": 785,
+   "size_gz": 5234421,
+   "size_br": 2763834,
+   "sha256": "a6566fc74768a9c30f89fe1ded4d6a521d116329907dd21adb1a480857613a5d",
+   "sha256_br": "f43f4818331c3ce29bed0e5d6ec3e03af816ce10265f4ae26e745995c7e21574",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts.min.geojson.br",
+   "use": "districts-brotli",
+   "features": 785,
+   "size_br": 2763834,
+   "sha256_br": "f43f4818331c3ce29bed0e5d6ec3e03af816ce10265f4ae26e745995c7e21574",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/jammu-kashmir.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 22,
+   "size_gz": 87025,
+   "sha256": "7724f63de08d77974f83af9265a00c4699ecfec760870bfc29079a199e42f8e2",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/jammu-kashmir.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 22,
+   "size_br": 49157,
+   "sha256_br": "1c33981ee42743f8c90f77705225d45c68528e96853529598ef27f2b281e9377",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/himachal-pradesh.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 12,
+   "size_gz": 80751,
+   "sha256": "929346c562dbce295b1f3e20c0110d6e2780027db012812db1ba87823746e8b5",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/himachal-pradesh.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 12,
+   "size_br": 44031,
+   "sha256_br": "b2f66fbe85e9b8ce7bfa395b0506ee8fce0f5d6bf32c92dd70ce86ffef2caf56",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/punjab.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 23,
+   "size_gz": 120524,
+   "sha256": "6229a025abfc941491d04605407f44890a7e4f819ed2734af0fb71db7ab2234e",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/punjab.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 23,
+   "size_br": 66098,
+   "sha256_br": "2128a3fc6573af818fe025bb3fa6a70f07483206346754fa3b14e4fd39d63565",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/chandigarh.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 1,
+   "size_gz": 1333,
+   "sha256": "4260e28a7840b6c653eff9fdc7269c219d0db31c2c3cbca2d1781bd643dcc89e",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/chandigarh.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 1,
+   "size_br": 915,
+   "sha256_br": "1ecf6dba796cf84550c8e0e1c26593548f9edede5f1b97c589bc4836bd888ec5",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/uttarakhand.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 13,
+   "size_gz": 89388,
+   "sha256": "d6251ac0e037a99af604c54a3970e06ac3d133ccfbd3a38a5a397a54d6291545",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/uttarakhand.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 13,
+   "size_br": 48046,
+   "sha256_br": "6735280fe2f06c915541f8a5bd72b564a5c6fa8e4b1da195a94c5a30079c8e6c",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/haryana.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 22,
+   "size_gz": 95216,
+   "sha256": "ecf99f94f1c051165b2f2d6fe6f0ab6871c645217fc2954ad8c0e0d38035939f",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/haryana.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 22,
+   "size_br": 54645,
+   "sha256_br": "144fb59527b04da3b47a55d516952bb43f0b22b1c490cf27fbbd92b1f810efc7",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/delhi.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 11,
+   "size_gz": 9992,
+   "sha256": "cc0188c8eae1e7ed854455a279af7594fce75602b0b10935ffbbdd03713b3488",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/delhi.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 11,
+   "size_br": 6670,
+   "sha256_br": "0b947a183e470cae9cc6ca08e6f1b7c46bb0afc8b16727c7a56a09c00a555b21",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/rajasthan.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 50,
+   "size_gz": 411496,
+   "sha256": "c0df3444b079c11acd8827b47d48a1e857b2c0c47aabf172c199ae50cb30f354",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/rajasthan.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 50,
+   "size_br": 214135,
+   "sha256_br": "c65e1455e877105463439fe00aadf3c8698fe66ee066c827f184427e017f1404",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/uttar-pradesh.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 75,
+   "size_gz": 562654,
+   "sha256": "9eaefe1e58e65a687d60b611f0902725c83b10567eba9251976cdbc2d9789d78",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/uttar-pradesh.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 75,
+   "size_br": 298180,
+   "sha256_br": "8aea8d802ab591870a2efd12100c496be77a2d53ee4336716f1b749272dfaf38",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/bihar.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 38,
+   "size_gz": 223598,
+   "sha256": "e21be8c54e005a847e8bd1a319499729dbe8abaff1e8e8769b46f11014b52622",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/bihar.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 38,
+   "size_br": 122769,
+   "sha256_br": "0e2b15974737738375dc69232b266f07804381c944f8ecf58d5f39c33d88321a",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/sikkim.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 6,
+   "size_gz": 13670,
+   "sha256": "8849d8af08180b83b840ebd21bc7b4a46366bc09d22f0dd99e333f3a38fa05b6",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/sikkim.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 6,
+   "size_br": 8406,
+   "sha256_br": "1d4ba141fd3de606dd82da4330198ba711553a5e319dd0270fd8a927b6f2012d",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/arunachal-pradesh.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 26,
+   "size_gz": 75211,
+   "sha256": "cb9fc893d992d2d2758c872e2368843608ecd1d46c687e4c76741cdb2360e773",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/arunachal-pradesh.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 26,
+   "size_br": 43440,
+   "sha256_br": "f27e90dda3f0ea2620efe5d0f2e62bf5e86e917df60891d258a9c6d3b81d374d",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/nagaland.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 16,
+   "size_gz": 54541,
+   "sha256": "d3efe9569e1d751565537475fea2f06f068b99f04d8eda93f30c7d31ccf83bc1",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/nagaland.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 16,
+   "size_br": 31270,
+   "sha256_br": "e47d7e6225dbb1c332b798329711f4df60faca5c025859debba3df2858df7d7b",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/manipur.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 16,
+   "size_gz": 53877,
+   "sha256": "d878a6d08953bc0115c6d4c5d654d57ba5ebb027803f6f65bc782aade77af832",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/manipur.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 16,
+   "size_br": 31603,
+   "sha256_br": "757ef5c4ea21927fa92edcabbb30889a75cdba09ccb5289be2893cabb96a4c39",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/mizoram.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 11,
+   "size_gz": 71760,
+   "sha256": "d57088957e19e69c74c49a900490dacf551d3c1e6682d969a1daad8b2c0a61d7",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/mizoram.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 11,
+   "size_br": 39477,
+   "sha256_br": "08b940950a8cbbeacafbec85a9f18392a8739410e4ab0d634e3a7594fef57d88",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/tripura.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 8,
+   "size_gz": 40911,
+   "sha256": "511bef6f9e90c01e2156bfa798b30d048df66fa5a67a359624dd5e815be655ba",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/tripura.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 8,
+   "size_br": 23941,
+   "sha256_br": "50293494017eda4ffdf2e4b3f13ae93da319a2cb2e37975d935e308d870b81e2",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/meghalaya.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 12,
+   "size_gz": 48055,
+   "sha256": "220551d0a8170a7b1a6b8b8efd659c3fac104b866c64f369435e9a3b7b02a8f9",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/meghalaya.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 12,
+   "size_br": 28305,
+   "sha256_br": "e50a138c91392dc95897dd5efa3ebc79384c155121b2a5b7ad11e1e36291f092",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/assam.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 35,
+   "size_gz": 180022,
+   "sha256": "1d6b99f55f5ae6fe8b1ee18b2ca9a3231ce36ed6f348b92a308f48b30aa9fc28",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/assam.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 35,
+   "size_br": 99232,
+   "sha256_br": "a4c57e5f7174e5a1c0f51641bb4b2892129bdeee567f114c1b5029fe3e96cab3",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/west-bengal.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 23,
+   "size_gz": 213316,
+   "sha256": "7f05e433eee1786646e1af2e3be14ffd0dbec68f3bea49432a51262c4927d062",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/west-bengal.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 23,
+   "size_br": 117701,
+   "sha256_br": "b7943574c224b92b0c526500fc47dbd29924f90b92ea3def78a6e5fa68728437",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/jharkhand.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 24,
+   "size_gz": 155816,
+   "sha256": "9f71c9ba621557fd8148e761df8bb16151b3181603c6afb4133bde8d41f2499c",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/jharkhand.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 24,
+   "size_br": 84047,
+   "sha256_br": "daa5731df3e6d14c213521d57db6c19bdf618c21ad051669e32a737402e92357",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/odisha.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 30,
+   "size_gz": 230537,
+   "sha256": "36b2c27030120c8d540c50c3bbe329a295c7bdd32a7891d84a8155e1a53f5fe1",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/odisha.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 30,
+   "size_br": 123190,
+   "sha256_br": "deb0aff0ea0a80d2dba8d1685808b2567c3bc51eb86cfdb704b2ec021e9b26c5",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/chhattisgarh.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 33,
+   "size_gz": 200910,
+   "sha256": "07fae236cd36a0a93970b1a81bccc95befcfa340ef49357f75d415d765288b14",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/chhattisgarh.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 33,
+   "size_br": 110554,
+   "sha256_br": "33446bab0d110236359093f0646c478a78bb49329ea751c535a150ed3e60e248",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/madhya-pradesh.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 52,
+   "size_gz": 483602,
+   "sha256": "e2bd3fbbc4b10859d0578b1fce14653326f214741f075d117dc254da5a51fcc6",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/madhya-pradesh.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 52,
+   "size_br": 253262,
+   "sha256_br": "6384c80621b29e305409d45ebaeeda5d09d2dd8904a31b670db5d43c62228674",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/gujarat.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 33,
+   "size_gz": 297892,
+   "sha256": "40c2bb2121cddb9286e1c389e7572b265661bcb554617ac656819fca2f806d4c",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/gujarat.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 33,
+   "size_br": 157707,
+   "sha256_br": "3fdad076134d167b7083c8d5132c9299f6b22ba55c07ac5de521541b18c838de",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/maharashtra.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 36,
+   "size_gz": 366002,
+   "sha256": "d5ca75faa91285ed0a9d56f14c24049f168ca7e927d50a254065c9a6b81eee2e",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/maharashtra.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 36,
+   "size_br": 188979,
+   "sha256_br": "90085174bd88320f4469268c4b0e5373fc41f86714a8a78b383e55e8eecbe5fa",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/andhra-pradesh.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 26,
+   "size_gz": 205176,
+   "sha256": "04324de864a1b345b4672a40ad6ecadf238f0413936352c4c78a5ee7292291a5",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/andhra-pradesh.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 26,
+   "size_br": 111502,
+   "sha256_br": "326b3f9eb7285c0f627b3cb75d138a815cc3b7a93e755bbbb2fadf1b1cc2b136",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/karnataka.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 31,
+   "size_gz": 216033,
+   "sha256": "f2f44604fbefee55d99a6bec4905e4f8e36409284148f54654ab7467d40ceaec",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/karnataka.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 31,
+   "size_br": 117279,
+   "sha256_br": "11a2282f4350b609f0366910e19e97ea64150eca47a6e4277c3d02cac10c6e9f",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/goa.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 2,
+   "size_gz": 8816,
+   "sha256": "1b4565d3ef53d2ba43988e36798c1f4fea7b4037176378413058bf90e7af939e",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/goa.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 2,
+   "size_br": 5461,
+   "sha256_br": "2a98f2098e3850f3e8e0ee1a1ce95e15e4d2c70332c26fa984b8b2c6b3445e1d",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/lakshadweep.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 1,
+   "size_gz": 2318,
+   "sha256": "401d1d8b2e533d359182548df294404d92fcbe5b9073d65603cc8f04b236e9d0",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/lakshadweep.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 1,
+   "size_br": 1629,
+   "sha256_br": "6c79d5e4bc516f82217e216f2481af9345c948312a7922bd0bb1dc70b896a6bd",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/kerala.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 14,
+   "size_gz": 75042,
+   "sha256": "8e3fb6e850b68e172256d177c3c97005c5daeaaad411ee119167a060495809cd",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/kerala.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 14,
+   "size_br": 42365,
+   "sha256_br": "0231c80a6edc5260743354c9559b3346e3f0d46828fb2a9c6e8e6a064bf6c097",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/tamil-nadu.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 38,
+   "size_gz": 283959,
+   "sha256": "8a7463175853102ef80ce829d82c8c488be042f331b390de5ea5aa32388d798c",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/tamil-nadu.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 38,
+   "size_br": 150241,
+   "sha256_br": "38a1a7587187bf363e1f60fd52498937b7d0f793692c876efb607b3dfa48f1de",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/puducherry.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 4,
+   "size_gz": 9854,
+   "sha256": "309f087935da11cd2478356be5ebad043f0c4b0c3c3d8308de145b1901b9e78c",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/puducherry.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 4,
+   "size_br": 6226,
+   "sha256_br": "6465292ee0241157d1eb174bfcb106b53dc8f9e446b8e4229da46aa28c76c089",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/andaman-nicobar.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 3,
+   "size_gz": 133724,
+   "sha256": "7e2d46f1873a643f5eb783c7a70a9aa7afcad522641adb32929d09a7bdf68c53",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/andaman-nicobar.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 3,
+   "size_br": 83640,
+   "sha256_br": "2c8715dd64c0af763179b325070fda2dc1caf3ffc34fbb60edbc5a2e504534c3",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/telangana.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 33,
+   "size_gz": 132162,
+   "sha256": "9c314b239edcbe7fb5fbe52a7b9952af3ddc4bcb43d234beed9138ed6afbd4b1",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/telangana.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 33,
+   "size_br": 73400,
+   "sha256_br": "a91f09eb0999e2220410bba4cf44f38b3bb86a48e0f52a659baf696de0d67109",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/ladakh.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 2,
+   "size_gz": 36892,
+   "sha256": "ffe1006e0d9f5f6d51295ede31793ac24b7455712a8d2632dbf2474d18568a56",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/ladakh.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 2,
+   "size_br": 20054,
+   "sha256_br": "bce250fb7d3a4d9cdea01d17c4354cf60f34ce7cb2aa7c03f223b592d3affb56",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "districts/by-state/dadra-nagar-haveli-daman-diu.min.geojson.gz",
+   "use": "districts-by-state",
+   "features": 3,
+   "size_gz": 5593,
+   "sha256": "1da4db5644c4093c75b2597213694af6d77dfd767fe9802b4cbbe6458a83c4b9",
+   "content_type": "application/geo+json",
+   "content_encoding": "gzip"
+  },
+  {
+   "path": "districts/by-state/dadra-nagar-haveli-daman-diu.min.geojson.br",
+   "use": "districts-by-state-brotli",
+   "features": 3,
+   "size_br": 3575,
+   "sha256_br": "f4a42512b25daccde046fdf366adf6d26f6c229de94350ef839be95f9cc6fbcd",
+   "content_type": "application/geo+json",
+   "content_encoding": "br"
+  },
+  {
+   "path": "lookup_state_region.min.json",
+   "use": "lookup",
+   "content_type": "application/json",
+   "size": 2602,
+   "sha256": "d8f243cf74518499e1d0c2e154b01d2fe00577c9b3f85fe05082ad6f6ac49d15"
+  },
+  {
+   "path": "lookup_state_region.min.json.gz",
+   "use": "lookup",
+   "content_type": "application/json",
+   "content_encoding": "gzip",
+   "size_gz": 768,
+   "sha256": "75eb9ec255610af2a6fb658e47c662fd43e1e5253ab43fd1b0eb83270afccd70",
+   "features": 36
+  },
+  {
+   "path": "lookup_state_region.min.json.br",
+   "use": "lookup-brotli",
+   "content_type": "application/json",
+   "content_encoding": "br",
+   "size_br": 665,
+   "sha256_br": "ec02d600a25a6c1db7394d5ba2de02d9a375915158edfa39776545930fd6546d"
+  }
+ ],
+ "includes": [
+  "police/manifest.json",
+  "education/manifest.json",
+  "healthcare/manifest.json",
+  "electoral/manifest.json",
+  "infrastructure/manifest.json",
+  "transport/manifest.json"
+ ]
+}

@@ -6,7 +6,7 @@ class District(Document):
 	def validate(self):
 		if self.district_name and self.state:
 			exists = frappe.db.exists(
-				"India Geo District",
+				"District",
 				{"district_name": self.district_name, "state": self.state, "name": ["!=", self.name]},
 			)
 			if exists:
