@@ -6,7 +6,7 @@ def get_data():
 		{
 			"module_name": "India Geo",
 			"type": "module",
-			"label": _("India Geo"),
+			"label": _("Geo Locations"),
 			"description": _("Administrative masters — Region, Zone, State, District, City, Village + CDN geo layers"),
 			"icon": "octicon octicon-globe",
 			"color": "blue",

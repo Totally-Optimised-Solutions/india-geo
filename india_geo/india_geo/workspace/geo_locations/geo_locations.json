@@ -11,7 +11,7 @@
  "idx": 0,
  "indicator_color": "blue",
  "is_hidden": 0,
- "label": "India Geo",
+ "label": "Geo Locations",
  "links": [
   {
    "hidden": 0,
@@ -92,10 +92,10 @@
    "type": "Link"
   }
  ],
- "modified": "2026-08-31 16:04:15.336153",
+ "modified": "2026-08-31 16:09:04.283309",
  "modified_by": "Administrator",
  "module": "India Geo",
- "name": "India Geo",
+ "name": "Geo Locations",
  "number_cards": [],
  "owner": "Administrator",
  "public": 1,
@@ -132,6 +132,6 @@
    "type": "DocType"
   }
  ],
- "title": "India Geo",
+ "title": "Geo Locations",
  "type": "Workspace"
 }

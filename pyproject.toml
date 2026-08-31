@@ -3,7 +3,7 @@ name = "india_geo"
 authors = [
     { name = "Totally Optimised Solutions", email = "hello@totallyoptimised.com"}
 ]
-description = "India Geo — administrative masters (Region/State/District/Village) + CDN geo data for Maps"
+description = "Geo Locations — India Geo — administrative masters (Region/State/District/Village) + CDN geo data for Maps"
 requires-python = ">=3.14"
 readme = "README.md"
 dynamic = ["version"]

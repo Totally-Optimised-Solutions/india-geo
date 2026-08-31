@@ -1,5 +1,5 @@
 app_name = "india_geo"
-app_title = "India Geo"
+app_title = "Geo Locations"
 app_publisher = "Totally Optimised Solutions"
 app_description = "India Geo — administrative masters (Region/State/District/Village) + CDN geo data for Maps"
 app_email = "hello@totallyoptimised.com"
