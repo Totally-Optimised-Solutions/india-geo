@@ -1,0 +1,103 @@
+{
+ "doctype": "DocType",
+ "name": "Habitation",
+ "module": "India Geo",
+ "custom": 0,
+ "issingle": 0,
+ "istable": 0,
+ "editable_grid": 0,
+ "track_changes": 1,
+ "autoname": "hash",
+ "title_field": "habitation_name",
+ "search_fields": "habitation_name, habitation_code, village",
+ "sort_field": "creation",
+ "engine": "InnoDB",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "India Geo Admin",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "India Geo Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "MFI Admin"
+  },
+  {
+   "read": 1,
+   "role": "MFI Branch Manager"
+  },
+  {
+   "read": 1,
+   "role": "MFI Loan Officer"
+  },
+  {
+   "read": 1,
+   "role": "MFI Auditor"
+  }
+ ],
+ "fields": [
+  {
+   "fieldname": "habitation_name",
+   "fieldtype": "Data",
+   "label": "Habitation Name",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "habitation_code",
+   "fieldtype": "Data",
+   "label": "Habitation Code (LGD)",
+   "in_list_view": 1,
+   "description": "LGD code"
+  },
+  {
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "label": "Village",
+   "options": "Village",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_enabled",
+   "fieldtype": "Check",
+   "label": "Enabled",
+   "default": "1",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  }
+ ],
+ "field_order": [
+  "habitation_name",
+  "habitation_code",
+  "village",
+  "column_break_1",
+  "is_enabled"
+ ],
+ "row_format": "Dynamic",
+ "sort_order": "DESC",
+ "states": [],
+ "links": [],
+ "actions": []
+}

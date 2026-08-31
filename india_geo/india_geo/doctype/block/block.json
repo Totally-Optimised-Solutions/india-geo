@@ -1,0 +1,103 @@
+{
+ "doctype": "DocType",
+ "name": "Block",
+ "module": "India Geo",
+ "custom": 0,
+ "issingle": 0,
+ "istable": 0,
+ "editable_grid": 0,
+ "track_changes": 1,
+ "autoname": "hash",
+ "title_field": "block_name",
+ "search_fields": "block_name, block_code, district",
+ "sort_field": "creation",
+ "engine": "InnoDB",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "India Geo Admin",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "India Geo Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "MFI Admin"
+  },
+  {
+   "read": 1,
+   "role": "MFI Branch Manager"
+  },
+  {
+   "read": 1,
+   "role": "MFI Loan Officer"
+  },
+  {
+   "read": 1,
+   "role": "MFI Auditor"
+  }
+ ],
+ "fields": [
+  {
+   "fieldname": "block_name",
+   "fieldtype": "Data",
+   "label": "Block Name",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "block_code",
+   "fieldtype": "Data",
+   "label": "Block Code (LGD)",
+   "in_list_view": 1,
+   "description": "LGD code"
+  },
+  {
+   "fieldname": "district",
+   "fieldtype": "Link",
+   "label": "District",
+   "options": "District",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_enabled",
+   "fieldtype": "Check",
+   "label": "Enabled",
+   "default": "1",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  }
+ ],
+ "field_order": [
+  "block_name",
+  "block_code",
+  "district",
+  "column_break_1",
+  "is_enabled"
+ ],
+ "row_format": "Dynamic",
+ "sort_order": "DESC",
+ "states": [],
+ "links": [],
+ "actions": []
+}

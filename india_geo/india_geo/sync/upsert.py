@@ -134,3 +134,144 @@ def upsert_districts_for_state(state_slug: str, features: list[dict], batch_comm
 			skipped_mismatch += 1
 	frappe.db.commit()
 	return {"inserted": inserted, "skipped_exists": skipped_exists, "skipped_mismatch": skipped_mismatch}
+
+def upsert_subdistricts_for_district(district_name: str, features: list[dict], batch_commit: int = 200) -> dict:
+	inserted = skipped_exists = skipped_mismatch = 0
+	for feat in features:
+		props = feat.get("properties") or {}
+		name = (props.get("sdtname") or props.get("SDTNAME") or props.get("subdistrict") or props.get("sdt_name") or "").strip()
+		code = str(props.get("sdtcode11") or props.get("sdt_code") or props.get("subdist_lgd") or "").strip()
+		if not name:
+			continue
+		display = name.title() if name.isupper() else name
+		if not frappe.db.exists("District", district_name):
+			continue
+		if frappe.db.exists("Subdistrict", {"subdistrict_name": display, "district": district_name}):
+			skipped_exists += 1
+			continue
+		doc = frappe.get_doc({"doctype": "Subdistrict", "subdistrict_name": display, "subdistrict_code": code, "district": district_name, "is_enabled": 1})
+		try:
+			doc.insert(ignore_permissions=True)
+			inserted += 1
+			if inserted % batch_commit == 0:
+				frappe.db.commit()
+		except Exception:
+			skipped_mismatch += 1
+	frappe.db.commit()
+	return {"inserted": inserted, "skipped_exists": skipped_exists, "skipped_mismatch": skipped_mismatch}
+
+
+def upsert_blocks_for_district(district_name: str, features: list[dict], batch_commit: int = 200) -> dict:
+	inserted = skipped_exists = skipped_mismatch = 0
+	for feat in features:
+		props = feat.get("properties") or {}
+		name = (props.get("block_name") or props.get("BLOCK_NAME") or props.get("blkname") or props.get("block") or "").strip()
+		code = str(props.get("block_lgd") or props.get("block_code") or props.get("BLKCODE11") or "").strip()
+		if not name:
+			continue
+		display = name.title() if name.isupper() else name
+		if not frappe.db.exists("District", district_name):
+			continue
+		if frappe.db.exists("Block", {"block_name": display, "district": district_name}):
+			skipped_exists += 1
+			continue
+		doc = frappe.get_doc({"doctype": "Block", "block_name": display, "block_code": code, "district": district_name, "is_enabled": 1})
+		try:
+			doc.insert(ignore_permissions=True)
+			inserted += 1
+			if inserted % batch_commit == 0:
+				frappe.db.commit()
+		except Exception:
+			skipped_mismatch += 1
+	frappe.db.commit()
+	return {"inserted": inserted, "skipped_exists": skipped_exists, "skipped_mismatch": skipped_mismatch}
+
+
+def upsert_panchayats_for_block(block_name: str, features: list[dict], batch_commit: int = 200) -> dict:
+	inserted = skipped_exists = skipped_mismatch = 0
+	for feat in features:
+		props = feat.get("properties") or {}
+		name = (props.get("panchayat_name") or props.get("PANCHAYAT") or props.get("gp_name") or "").strip()
+		code = str(props.get("panchayat_code") or props.get("gp_lgd") or "").strip()
+		if not name:
+			continue
+		display = name.title() if name.isupper() else name
+		if not frappe.db.exists("Block", block_name):
+			continue
+		if frappe.db.exists("Panchayat", {"panchayat_name": display, "block": block_name}):
+			skipped_exists += 1
+			continue
+		doc = frappe.get_doc({"doctype": "Panchayat", "panchayat_name": display, "panchayat_code": code, "block": block_name, "is_enabled": 1})
+		try:
+			doc.insert(ignore_permissions=True)
+			inserted += 1
+			if inserted % batch_commit == 0:
+				frappe.db.commit()
+		except Exception:
+			skipped_mismatch += 1
+	frappe.db.commit()
+	return {"inserted": inserted, "skipped_exists": skipped_exists, "skipped_mismatch": skipped_mismatch}
+
+
+def upsert_villages_for_panchayat(panchayat_name: str, features: list[dict], batch_commit: int = 200) -> dict:
+	inserted = skipped_exists = skipped_mismatch = 0
+	for feat in features:
+		props = feat.get("properties") or {}
+		name = (props.get("village_name") or props.get("VILLAGE_NAME") or props.get("vill_name") or "").strip()
+		code = str(props.get("village_code") or props.get("village_lgd") or props.get("VILLCODE") or "").strip()
+		if not name:
+			continue
+		display = name.title() if name.isupper() else name
+		if not frappe.db.exists("Panchayat", panchayat_name):
+			continue
+		# Also resolve district/state via Panchayat chain for search optimisation
+		p = frappe.get_doc("Panchayat", panchayat_name)
+		# Village has panchayat + district + state links — fill from panchayat's block->district
+		district = None
+		state = None
+		try:
+			blk = frappe.get_doc("Block", p.block)
+			district = blk.district
+			district_doc = frappe.get_doc("District", district)
+			state = district_doc.state
+		except Exception:
+			pass
+		if frappe.db.exists("Village", {"village_name": display, "panchayat": panchayat_name}):
+			skipped_exists += 1
+			continue
+		doc = frappe.get_doc({"doctype": "Village", "village_name": display, "village_code": code, "panchayat": panchayat_name, "district": district, "state": state, "is_enabled": 1})
+		try:
+			doc.insert(ignore_permissions=True)
+			inserted += 1
+			if inserted % batch_commit == 0:
+				frappe.db.commit()
+		except Exception:
+			skipped_mismatch += 1
+	frappe.db.commit()
+	return {"inserted": inserted, "skipped_exists": skipped_exists, "skipped_mismatch": skipped_mismatch}
+
+
+def upsert_habitations_for_village(village_name: str, features: list[dict], batch_commit: int = 200) -> dict:
+	inserted = skipped_exists = skipped_mismatch = 0
+	for feat in features:
+		props = feat.get("properties") or {}
+		name = (props.get("habitation_name") or props.get("HABITATION") or props.get("hab_name") or "").strip()
+		code = str(props.get("habitation_code") or props.get("hab_lgd") or "").strip()
+		if not name:
+			continue
+		display = name.title() if name.isupper() else name
+		# Village is hash autoname — need to resolve via name field; but Village not unique by name, so check composite
+		if frappe.db.exists("Habitation", {"habitation_name": display, "village": village_name}):
+			skipped_exists += 1
+			continue
+		doc = frappe.get_doc({"doctype": "Habitation", "habitation_name": display, "habitation_code": code, "village": village_name, "is_enabled": 1})
+		try:
+			doc.insert(ignore_permissions=True)
+			inserted += 1
+			if inserted % batch_commit == 0:
+				frappe.db.commit()
+		except Exception:
+			skipped_mismatch += 1
+	frappe.db.commit()
+	return {"inserted": inserted, "skipped_exists": skipped_exists, "skipped_mismatch": skipped_mismatch}
+

@@ -1,0 +1,103 @@
+{
+ "doctype": "DocType",
+ "name": "Panchayat",
+ "module": "India Geo",
+ "custom": 0,
+ "issingle": 0,
+ "istable": 0,
+ "editable_grid": 0,
+ "track_changes": 1,
+ "autoname": "hash",
+ "title_field": "panchayat_name",
+ "search_fields": "panchayat_name, panchayat_code, block",
+ "sort_field": "creation",
+ "engine": "InnoDB",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "India Geo Admin",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "India Geo Manager",
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "MFI Admin"
+  },
+  {
+   "read": 1,
+   "role": "MFI Branch Manager"
+  },
+  {
+   "read": 1,
+   "role": "MFI Loan Officer"
+  },
+  {
+   "read": 1,
+   "role": "MFI Auditor"
+  }
+ ],
+ "fields": [
+  {
+   "fieldname": "panchayat_name",
+   "fieldtype": "Data",
+   "label": "Panchayat Name",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "panchayat_code",
+   "fieldtype": "Data",
+   "label": "Panchayat Code (LGD)",
+   "in_list_view": 1,
+   "description": "LGD code"
+  },
+  {
+   "fieldname": "block",
+   "fieldtype": "Link",
+   "label": "Block",
+   "options": "Block",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "is_enabled",
+   "fieldtype": "Check",
+   "label": "Enabled",
+   "default": "1",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  }
+ ],
+ "field_order": [
+  "panchayat_name",
+  "panchayat_code",
+  "block",
+  "column_break_1",
+  "is_enabled"
+ ],
+ "row_format": "Dynamic",
+ "sort_order": "DESC",
+ "states": [],
+ "links": [],
+ "actions": []
+}
