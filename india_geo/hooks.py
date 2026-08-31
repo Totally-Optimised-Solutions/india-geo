@@ -1,5 +1,5 @@
 app_name = "india_geo"
-app_title = "Geo Locations"
+app_title = "India Geo"
 app_publisher = "Totally Optimised Solutions"
 app_description = "India Geo — administrative masters (Region/State/District/Village) + CDN geo data for Maps"
 app_email = "hello@totallyoptimised.com"
@@ -15,7 +15,7 @@ fixtures = [
 app_logo_url = "/assets/india_geo/images/india-geo-logo.svg"
 app_icon = "octicon octicon-globe"
 app_color = "blue"
-app_home = "/app/geo-locations"
+app_home = "/app/india-geo"
 
 add_to_apps_screen = [
 	{
