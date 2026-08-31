@@ -15,7 +15,7 @@ fixtures = [
 app_logo_url = "/assets/india_geo/images/india-geo-logo.svg"
 app_icon = "octicon octicon-globe"
 app_color = "blue"
-app_home = "/app/india-geo"
+app_home = "/app/geo-locations"
 
 add_to_apps_screen = [
 	{
